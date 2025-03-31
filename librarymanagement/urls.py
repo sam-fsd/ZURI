@@ -36,8 +36,9 @@ urlpatterns = [
     path('studentlogin', LoginView.as_view(
         template_name='library/studentlogin.html')),
 
-    path('logout', LogoutView.as_view(template_name='library/index.html')),
-    path('afterlogin', views.afterlogin_view),
+    path('logout', views.custom_logout_view, name='logout'),
+    path(
+        'afterlogin', views.afterlogin_view),
 
     path('addbook', views.addbook_view),
     path('viewbook', views.viewbook_view),
