@@ -36,6 +36,7 @@ urlpatterns = [
     path('studentlogin', LoginView.as_view(
         template_name='library/studentlogin.html')),
 
+    # custom logout view
     path('logout', views.custom_logout_view, name='logout'),
     path(
         'afterlogin', views.afterlogin_view),
